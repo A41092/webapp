@@ -35,8 +35,8 @@ const Footer = () => {
           <div className="transform hover:scale-110 transition-transform duration-300 hover:text-gray-800">
             <h3 className="text-2xl font-bold mb-4">Bản đồ</h3>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093656!2d144.9556511153219!3d-37.81732397975167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218cee40!2sMelbourne%2C+Victoria%2C+Australia!5e0!3m2!1sen!2s!4v1633075860914!5m2!1sen!2s"
-              width="100%"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.0014678586267!2d105.7877861794253!3d20.96516624013615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad2814991b5b%3A0xca4d0c1741d5f3b7!2zVHJ1bmcgdMOibSBM4buRcCAtIEThuqd1IC0g4bquYyBRdXkgw5QgdMO0IEjDoCDEkMO0bmc!5e1!3m2!1sen!2s!4v1740299471875!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                width="100%"
               height="200"
               style={{ border: 0 }}
               allowFullScreen=""
