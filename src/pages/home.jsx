@@ -5,26 +5,56 @@ import img1 from "../images/1.jpg";
 import img2 from "../images/2.jpg";
 
 export default function Layout() {
-    const products = [
-        { id: 1, name: "LỐP ROADX 255/55R18 105V DU02", price: "3.250.000đ", image: img1  },
-        { id: 2, name: "LỐP ROADX 245/40ZR18 97Y DU01", price: "2.630.000đ", image: img2  },
-        { id: 2, name: "LỐP ROADX 245/40ZR18 97Y DU01", price: "2.630.000đ", image: img2  },
-        { id: 2, name: "LỐP ROADX 245/40ZR18 97Y DU01", price: "2.630.000đ", image: img2  },
-        { id: 2, name: "LỐP ROADX 245/40ZR18 97Y DU01", price: "2.630.000đ", image: img2  },
-        { id: 2, name: "LỐP ROADX 245/40ZR18 97Y DU01", price: "2.630.000đ", image: img2  },
-    ];
+  const products = [
+    {
+      id: 1,
+      name: "LỐP ROADX 255/55R18 105V DU02",
+      price: "3.250.000đ",
+      image: img1,
+    },
+    {
+      id: 2,
+      name: "LỐP ROADX 245/40ZR18 97Y DU01",
+      price: "2.630.000đ",
+      image: img2,
+    },
+    {
+      id: 2,
+      name: "LỐP ROADX 245/40ZR18 97Y DU01",
+      price: "2.630.000đ",
+      image: img2,
+    },
+    {
+      id: 2,
+      name: "LỐP ROADX 245/40ZR18 97Y DU01",
+      price: "2.630.000đ",
+      image: img2,
+    },
+    {
+      id: 2,
+      name: "LỐP ROADX 245/40ZR18 97Y DU01",
+      price: "2.630.000đ",
+      image: img2,
+    },
+    {
+      id: 2,
+      name: "LỐP ROADX 245/40ZR18 97Y DU01",
+      price: "2.630.000đ",
+      image: img2,
+    },
+  ];
 
-    return (
-        <div className="flex flex-col min-h-screen">
-            {/* Header */}
-            <Header />
+  return (
+    <div className="flex flex-col min-h-screen">
+      {/* Header */}
+      <Header />
 
-            {/* Container */}
-            <div>
-                <ProductSlider/>
-            </div>
+      {/* Container */}
+      <div>
+        <ProductSlider />
+      </div>
 
-            {/* <div className="flex-1 bg-gray-100 p-6 h-svh">
+      {/* <div className="flex-1 bg-gray-100 p-6 h-svh">
                 <div className="container mx-auto px-4">
                     <div className="flex justify-between items-center mb-4">
                         <h2 className="text-xl font-semibold">Sản phẩm bán chạy</h2>
@@ -49,11 +79,11 @@ export default function Layout() {
                 </div>
             </div> */}
 
-            {/* Footer */}
-            <footer className="bg-gray-800 text-white text-center py-3">
-                <Footer />
-                Footer - Chân trang © 2025
-            </footer>
-        </div>
-    );
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white text-center py-3">
+        <Footer />
+        Footer - Chân trang © 2025
+      </footer>
+    </div>
+  );
 }
