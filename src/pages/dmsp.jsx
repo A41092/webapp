@@ -2,95 +2,33 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { PiTireFill } from "react-icons/pi";
+import { FaCarBattery,FaOilCan,FaTools } from "react-icons/fa";
+
 import img1 from "../images/1.jpg";
 import img2 from "../images/2.jpg";
-const categories = [
+import img3 from "../images/lop.png";
+
+const products = [
   {
-    title: "LỐP Ô TÔ",
-    products: [
-      {
-        id: 1,
-        name: "Lốp RADAR 255/55R17 11…RADAR 255/55R17 11…",
-        price: "2.260.000đ",
-        img: img1,
-      },
-      {
-        id: 2,
-        name: "Lốp RADAR 255/55R17 10…ốp RADAR 255/55R17 10…",
-        price: "2.750.000đ",
-        img: "tire2.jpg",
-      },
-      {
-        id: 3,
-        name: "Lốp RADAR 255/55R17 10…ốp RADAR 255/55R17 10…",
-        price: "1.880.000đ",
-        img: "tire3.jpg",
-      },
-      {
-        id: 4,
-        name: "Lốp RADAR 255/55R17 DH…ốp RADAR 255/55R17 10…",
-        price: "2.080.000đ",
-        img: "tire4.jpg",
-      },
-    ],
+    name: "LỐP ROADX 255/55R18 105V DU02",
+    price: "3.250.000",
+    image: img1, // Thay bằng link ảnh thực tế
   },
   {
-    title: "ẮC QUY",
-    products: [
-      {
-        id: 5,
-        name: "Ắc quy PLATINUM N200",
-        price: "5.150.000đ",
-        img: "battery1.jpg",
-      },
-      {
-        id: 6,
-        name: "Ắc quy PLATINUM 200A",
-        price: "2.500.000đ",
-        img: "battery2.jpg",
-      },
-      {
-        id: 7,
-        name: "Ắc quy PLATINUM DF 64…",
-        price: "1.180.000đ",
-        img: "battery3.jpg",
-      },
-      {
-        id: 8,
-        name: "Ắc quy PLATINUM 150G…",
-        price: "2.400.000đ",
-        img: "battery4.jpg",
-      },
-    ],
+    name: "LỐP ROADX 245/40ZR18 97Y DU01",
+    price: "2.630.000",
+    image: img3,
   },
   {
-    title: "DẦU NHỚT",
-    products: [
-      {
-        id: 9,
-        name: "Dầu nhớt CASTROL 20W50",
-        price: "540.000đ",
-        img: "oil1.jpg",
-      },
-      {
-        id: 10,
-        name: "Dầu nhớt CASTROL 5W40",
-        price: "680.000đ",
-        img: "oil2.jpg",
-      },
-      {
-        id: 11,
-        name: "Dầu nhớt CASTROL 10W40",
-        price: "680.000đ",
-        img: "oil3.jpg",
-      },
-      {
-        id: 12,
-        name: "Dầu nhớt CASTROL 5W30",
-        price: "1.000.000đ",
-        img: "oil4.jpg",
-      },
-    ],
+    name: "LỐP ROADX 235/60R18 107H DHT01",
+    price: "1.960.000",
+    image: img2,
+  },
+  {
+    name: "LỐP ROADX 225/45ZR18 95W DU01",
+    price: "1.450.000",
+    image: "https://placehold.co/800x1066",
   },
 ];
 
@@ -105,22 +43,198 @@ const ProductSlider = () => {
   };
 
   return (
-    <div className="container mx-auto p-10 bg-gray-100">
-      <section className="w-full h-80 bg-red-500 border-spacing-3 mb-5">
-        <div className="bg-blue-400 w-full h-10"><h2>banner</h2></div>
-        <div className="w-full h-70 bg-slate-500">ảnhbanner</div>
+    <div className="container mx-auto p-10 bg-gray-200">
+      <section className="w-full h-auto mb-5 rounded-lg">
+        <div className="bg-blue-400 w-full h-10">
+          <h2>banner</h2>
+        </div>
+        <div className="w-full h-70 bg-slate-500">
+          <img
+            src="https://placehold.co/1080x350"
+            alt="Banner placeholder"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </section>
-      <section className="w-full h-80 bg-red-500 border-spacing-3 mb-5  ">
-        <div className="bg-blue-400 w-full h-10"><h2>Lốp ô tô</h2></div>
+      <section className="w-full h-[500px] bg-gray-300  mb-5 rounded-lg">
+        <div className="w-full h-10 m-2 p-3">
+          <h2 className="text-2xl font-bold text-black flex items-center gap-2">
+            <PiTireFill className="text-red-500 text-3xl  " />
+            <a
+              href="#"
+              title="Lốp Ô Tô"
+              className="text-black hover:text-blue-800 transition-colors duration-300"
+            >
+              LỐP Ô TÔ THANH LÝ GIÁ RẺ
+            </a>
+          </h2>
+        </div>
+        <div className="grid grid-cols-4 gap-4 m-5">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="border rounded-lg shadow-lg p-4  w-full h-[420px] bg-white "
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-[320px] h-[320px] object-contain mb-2"
+              />
+              <h3 className="text-md font-semibold">{product.name}</h3>
+              <p className="text-blue-600 font-bold">{product.price}₫</p>
+            </div>
+          ))}
+        </div>
       </section>
-      <section className="w-full h-80 bg-red-500 border-spacing-3 mb-5 ">
-      <div className="bg-blue-400 w-full h-10"><h2>Ắc quy ô tô</h2></div>
+      <section className="w-full h-[500px] bg-gray-300  mb-5 rounded-lg">
+        <div className="w-full h-10 m-2 p-3">
+          <h2 className="text-2xl font-bold text-black flex items-center gap-2">
+            <PiTireFill className="text-red-500 text-3xl  " />
+            <a
+              href="#"
+              title="Lốp Ô Tô"
+              className="text-black hover:text-blue-800 transition-colors duration-300"
+            >
+              LỐP Ô TÔ MỚI
+            </a>
+          </h2>
+        </div>
+        <div className="grid grid-cols-4 gap-4 m-5">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="border rounded-lg shadow-lg p-4  w-full h-[420px] bg-white "
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-[320px] h-[320px] object-contain mb-2"
+              />
+              <h3 className="text-md font-semibold">{product.name}</h3>
+              <p className="text-blue-600 font-bold">{product.price}₫</p>
+            </div>
+          ))}
+        </div>
       </section>
-      <section className="w-full h-80 bg-red-500 border-spacing-3 mb-5 ">
-      <div className="bg-blue-400 w-full h-10"><h2>Dầu nhớt</h2></div>
+      <section className="w-full h-[500px] bg-gray-300  mb-5 rounded-lg">
+        <div className="w-full h-10 m-2 p-3">
+          <h2 className="text-2xl font-bold text-black flex items-center gap-2">
+            <PiTireFill className="text-red-500 text-3xl  " />
+            <a
+              href="#"
+              title="Lốp Ô Tô"
+              className="text-black hover:text-blue-800 transition-colors duration-300"
+            >
+              LỐP Ô TÔ ĐÃ QUA SỬ DỤNG - LƯỚT
+            </a>
+          </h2>
+        </div>
+        <div className="grid grid-cols-4 gap-4 m-5">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="border rounded-lg shadow-lg p-4  w-full h-[420px] bg-white "
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-[320px] h-[320px] object-contain mb-2"
+              />
+              <h3 className="text-md font-semibold">{product.name}</h3>
+              <p className="text-blue-600 font-bold">{product.price}₫</p>
+            </div>
+          ))}
+        </div>
       </section>
-      <section className="w-full h-80 bg-red-500 border-spacing-3 mb-5 ">
-      <div className="bg-blue-400 w-full h-10"><h2>Phụ kiện</h2></div>
+      <section className="w-full h-[500px] bg-gray-300  mb-5 rounded-lg">
+        <div className="w-full h-10 m-2 p-3">
+          <h2 className="text-2xl font-bold text-black flex items-center gap-2">
+            <FaCarBattery  className="text-red-500 text-3xl  " />
+            <a
+              href="#"
+              title="Lốp Ô Tô"
+              className="text-black hover:text-blue-800 transition-colors duration-300"
+            >
+              BÌNH ẮC QUY Ô TÔ
+            </a>
+          </h2>
+        </div>
+        <div className="grid grid-cols-4 gap-4 m-5">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="border rounded-lg shadow-lg p-4  w-full h-[420px] bg-white "
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-[320px] h-[320px] object-contain mb-2"
+              />
+              <h3 className="text-md font-semibold">{product.name}</h3>
+              <p className="text-blue-600 font-bold">{product.price}₫</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="w-full h-[500px] bg-gray-300  mb-5 rounded-lg">
+        <div className="w-full h-10 m-2 p-3">
+          <h2 className="text-2xl font-bold text-black flex items-center gap-2">
+            <FaOilCan className="text-red-500 text-3xl  " />
+            <a
+              href="#"
+              title="Lốp Ô Tô"
+              className="text-black hover:text-blue-800 transition-colors duration-300"
+            >
+              DẦU NHỚT ĐỘNG CƠ Ô TÔ
+            </a>
+          </h2>
+        </div>
+        <div className="grid grid-cols-4 gap-4 m-5">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="border rounded-lg shadow-lg p-4  w-full h-[420px] bg-white "
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-[320px] h-[320px] object-contain mb-2"
+              />
+              <h3 className="text-md font-semibold">{product.name}</h3>
+              <p className="text-blue-600 font-bold">{product.price}₫</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="w-full h-[500px] bg-gray-300  mb-5 rounded-lg">
+        <div className="w-full h-10 m-2 p-3">
+          <h2 className="text-2xl font-bold text-black flex items-center gap-2">
+            <FaTools className="text-red-500 text-3xl  " />
+            <a
+              href="#"
+              title="Lốp Ô Tô"
+              className="text-black hover:text-blue-800 transition-colors duration-300"
+            >
+              PHỤ TÙNG - PHỤ KIỆN Ô TÔ
+            </a>
+          </h2>
+        </div>
+        <div className="grid grid-cols-4 gap-4 m-5">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="border rounded-lg shadow-lg p-4  w-full h-[420px] bg-white "
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-[320px] h-[320px] object-contain mb-2"
+              />
+              <h3 className="text-md font-semibold">{product.name}</h3>
+              <p className="text-blue-600 font-bold">{product.price}₫</p>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

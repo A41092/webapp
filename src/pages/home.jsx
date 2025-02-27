@@ -1,9 +1,9 @@
 import Header from "../component/header";
 import Footer from "../component/footer";
-import ProductSlider from "./dmsp";
+// import ProductSlider from "./dmsp";
 import img1 from "../images/1.jpg";
 import img2 from "../images/2.jpg";
-
+import ProductSlider from "./dmsp";
 export default function Layout() {
   const products = [
     {
