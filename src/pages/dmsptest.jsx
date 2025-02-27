@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { PiTireFill } from "react-icons/pi";
-import { FaCarBattery,FaOilCan,FaTools } from "react-icons/fa";
+import { FaCarBattery, FaOilCan, FaTools } from "react-icons/fa";
 
 import img1 from "../images/1.jpg";
 import img2 from "../images/2.jpg";
@@ -45,7 +45,7 @@ const ProductSlider = () => {
   return (
     <div className="container mx-auto p-10 bg-gray-200">
       <section className="w-full h-auto mb-5 rounded-lg">
-        <div className="bg-blue-400 w-full h-10">
+        <div className=" w-full h-10 p-3">
           <h2>banner</h2>
         </div>
         <div className="w-full h-70 bg-slate-500">
@@ -57,42 +57,39 @@ const ProductSlider = () => {
         </div>
       </section>
       <section className="w-full bg-gray-300 mb-5 rounded-lg p-4">
-    <div className="w-full p-3">
-      <h2 className="text-2xl font-bold text-black flex items-center gap-2">
-        <PiTireFill className="text-red-500 text-3xl" />
-        <a
-          href="#"
-          title="Lốp Ô Tô"
-          className="text-black hover:text-blue-800 transition-colors duration-300"
-        >
-          LỐP Ô TÔ THANH LÝ GIÁ RẺ
-        </a>
-      </h2>
-    </div>
-
-    {/* Responsive Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-5">
-      {products.map((product, index) => (
-        <div
-          key={index}
-          className="border rounded-lg shadow-lg p-4 w-full bg-white flex flex-col items-center"
-        >
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full max-w-[250px] h-[250px] object-contain mb-2"
-          />
-          <h3 className="text-md font-semibold text-center">{product.name}</h3>
-          <p className="text-blue-600 font-bold">{product.price}₫</p>
+        <div className="w-full p-3">
+          <h2 className="text-2xl font-bold text-black flex items-center gap-2">
+            <PiTireFill className="text-red-500 text-3xl" />
+            <a
+              href="#"
+              title="Lốp Ô Tô"
+              className="text-black hover:text-blue-800 transition-colors duration-300"
+            >
+              LỐP Ô TÔ THANH LÝ GIÁ RẺ
+            </a>
+          </h2>
         </div>
-      ))}
-    </div>
-  </section>
-   
-      
-      
-     
-      
+
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-5">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="border rounded-lg shadow-lg p-4 w-full bg-white flex flex-col items-center"
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full max-w-[250px] h-[250px] object-contain mb-2"
+              />
+              <h3 className="text-md font-semibold text-center">
+                {product.name}
+              </h3>
+              <p className="text-blue-600 font-bold">{product.price}₫</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };

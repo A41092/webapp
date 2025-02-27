@@ -44,19 +44,16 @@ const ProductSlider = () => {
 
   return (
     <div className="container mx-auto p-10 bg-gray-200">
-      <section className="w-full h-auto mb-5 rounded-lg">
-        <div className="bg-blue-400 w-full h-10">
-          <h2>banner</h2>
-        </div>
-        <div className="w-full h-70 bg-slate-500">
+      <section className="w-full h-auto mb-5 ">
+        <div className="w-auto h-auto p-3">
           <img
-            src="https://placehold.co/1080x350"
+            src="https://placehold.co/1920x500"
             alt="Banner placeholder"
-            className="w-full h-full object-cover"
+           className="w-full max-h-[400px] sm:max-h-[300px] md:max-h-[350px] lg:max-h-[400px] object-cover rounded-lg"
           />
         </div>
       </section>
-      <section className="w-full h-[500px] bg-gray-300  mb-5 rounded-lg">
+      <section className="w-full h-[500px]mb-5 rounded-lg">
         <div className="w-full h-10 m-2 p-3">
           <h2 className="text-2xl font-bold text-black flex items-center gap-2">
             <PiTireFill className="text-red-500 text-3xl  " />
