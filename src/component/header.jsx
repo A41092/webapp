@@ -8,9 +8,9 @@ import {
 import { FiAlignJustify } from "react-icons/fi";
 export default function Header() {
   return (
-    <header className="w-full shadow-md">
+    <header className="w-11/12 mx-auto shadow-md mb-5">
       {/* Top Header */}
-      <div className=" flex justify-between items-center gap-10 px-6 py-3 ">
+      <div className=" flex justify-between items-center gap-10 m-2 ">
         <div className="w-1/4 p-4 justify-between  bg-blue-500 rounded-md ">
           <div className="flex items-center w-max h-max font-bold justify-center rounded-md">
             <span>Đây là Logo</span>
@@ -37,7 +37,7 @@ export default function Header() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-blue-800 text-white">
+      <nav className="bg-blue-800 text-white  rounded-lg ">
         <div className="container mx-auto flex justify-between items-center px-6 py-2">
           {/* Menu */}
           <ul className="flex space-x-6 text-sm font-semibold gap-4">
@@ -53,37 +53,37 @@ export default function Header() {
             </li>
             <li className="relative group">
               <a href="#" className="hover:text-gray-300">
-                LỐP Ô TÔ ▼
+                LỐP Ô TÔ 
               </a>
             </li>
             <li className="relative group">
               <a href="#" className="hover:text-gray-300">
-                DẦU NHỚT ▼
+                DẦU NHỚT 
               </a>
             </li>
             <li className="relative group">
               <a href="#" className="hover:text-gray-300">
-                ẮC QUY ▼
+                ẮC QUY 
               </a>
             </li>
             <li className="relative group">
               <a href="#" className="hover:text-gray-300">
-                BẢO DƯỠNG ▼
+                BẢO DƯỠNG 
               </a>
             </li>
             <li className="relative group">
               <a href="#" className="hover:text-gray-300">
-                PHỤ TÙNG, PHỤ KIỆN ▼
+                PHỤ TÙNG, PHỤ KIỆN 
               </a>
             </li>
             <li className="relative group">
               <a href="#" className="hover:text-gray-300">
-                CỨU HỘ 24/7 ▼
+                CỨU HỘ 24/7 
               </a>
             </li>
             <li className="relative group">
               <a href="#" className="hover:text-gray-300">
-                DỊCH VỤ ▼
+                DỊCH VỤ 
               </a>
             </li>
             <li>
