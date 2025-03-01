@@ -43,7 +43,7 @@ const ProductSlider = () => {
   };
 
   return (
-    <div className="container mx-auto p-10 bg-gray-200">
+    <div className="container w-11/12 mx-auto  bg-gray-200">
       <section className="w-full h-auto mb-5 ">
         <div className="w-auto h-auto p-3">
           <img

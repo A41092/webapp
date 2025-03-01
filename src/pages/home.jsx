@@ -45,7 +45,7 @@ export default function Layout() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-100">
       {/* Header */}
       <Header />
 
@@ -80,10 +80,9 @@ export default function Layout() {
             </div> */}
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white text-center py-3">
+      
         <Footer />
-        Footer - Chân trang © 2025
-      </footer>
+       
     </div>
   );
 }
