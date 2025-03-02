@@ -1,14 +1,16 @@
+import img1 from "../images/1.jpg";
+import img2 from "../images/2.jpg";
 const Lopoto = () => {
   const products = [
     {
       name: "LỐP ROADX 255/55R18 105V DU02",
       price: "3.250.000₫",
-      img: "link1",
+      img: img1,
     },
     {
       name: "LỐP ROADX 245/40ZR18 97Y DU01",
       price: "2.630.000₫",
-      img: "link2",
+      img: img2,
     },
     {
       name: "LỐP ROADX 235/60R18 107H DHT01",
@@ -42,13 +44,60 @@ const Lopoto = () => {
       <div className="w-11/12 bg-gray-100 mx-auto h-auto rounded-lg container flex shadow-lg mb-5 gap-2">
         {/* Sidebar */}
         <div className="flex flex-col w-1/5 p-4 mt-5 mr-5 mb-5 font-semibold rounded-l-l bg-gray-400">
+          <h2 className="mx-auto mb-2 font-bold ">Bộ lọc - Tìm kiếm</h2>
           <div className="flex  gap-1">
             <button className="bg-green-600 w-1/2 rounded-xl size-10">Theo kích thước</button>
             <button className="bg-blue-600 w-1/2 rounded-xl size-10 ">Theo dòng xe</button>
 
           </div>
           <div className=" bg-red-400 h-4/5 mt-3">
-            nội dung lọc
+            <div className=" bg-blue-300 m-2">
+              <form className="flex flex-col">
+                <span className=" p-2 ">Chiều rộng</span>
+                <input
+                  type="text"
+                  className=" w-max ml-2  border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Nhập..."
+                />
+                <span className=" p-2 "> Chiều cao</span>
+                <input
+                  type="text"
+                  className=" w-max ml-2  border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Nhập..."
+                />
+                <span className=" p-2 ">Vành(inch)</span>
+                <input
+                  type="text"
+                  className=" w-max ml-2 mb-2  border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Nhập..."
+                />
+              </form>
+            </div>
+            <div className=" bg-blue-300 m-2">
+              <form className="flex flex-col">
+                <span className=" p-2 ">Hãng lốp</span>
+                <input
+                  type="text"
+                  className=" w-max ml-2  border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Nhập..."
+                />
+                <span className=" p-2 ">Loại lốp</span>
+                <input
+                  type="text"
+                  className=" w-max ml-2  border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Nhập..."
+                />
+                <span className=" p-2 ">Năm SX</span>
+                <input
+                  type="text"
+                  className=" w-max ml-2 mb-2  border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Nhập..."
+                />
+              </form>
+            </div>
+            <div className=" bg-blue-300 m-2 p-2">
+              <button className="bg-blue-500  font-bold p-2 items-center w-full rounded-lg" >Lọc</button>
+            </div>
           </div>
         </div>
 
