@@ -1,3 +1,5 @@
+import Lopoto from '../pages/lopoto';
+import {Link } from "react-router-dom"
 import {
   FaMapMarkerAlt,
   FaEnvelope,
@@ -37,72 +39,7 @@ export default function Header() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-blue-800 text-white  rounded-lg ">
-        <div className="container mx-auto flex justify-between items-center px-6 py-2">
-          {/* Menu */}
-          <ul className="flex space-x-6 text-sm font-semibold gap-4">
-            <li className="relative group">
-              <a href="#" className="hover:text-gray-300">
-                <FiAlignJustify className="size-10" />
-              </a>
-            </li>
-            <li className="relative group">
-              <a href="#" className="hover:text-gray-300">
-                TRANG CHỦ
-              </a>
-            </li>
-            <li className="relative group">
-              <a href="#" className="hover:text-gray-300">
-                LỐP Ô TÔ 
-              </a>
-            </li>
-            <li className="relative group">
-              <a href="#" className="hover:text-gray-300">
-                DẦU NHỚT 
-              </a>
-            </li>
-            <li className="relative group">
-              <a href="#" className="hover:text-gray-300">
-                ẮC QUY 
-              </a>
-            </li>
-            <li className="relative group">
-              <a href="#" className="hover:text-gray-300">
-                BẢO DƯỠNG 
-              </a>
-            </li>
-            <li className="relative group">
-              <a href="#" className="hover:text-gray-300">
-                PHỤ TÙNG, PHỤ KIỆN 
-              </a>
-            </li>
-            <li className="relative group">
-              <a href="#" className="hover:text-gray-300">
-                CỨU HỘ 24/7 
-              </a>
-            </li>
-            <li className="relative group">
-              <a href="#" className="hover:text-gray-300">
-                DỊCH VỤ 
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-300">
-                TIN TỨC
-              </a>
-            </li>
-          </ul>
-
-          <div className="flex items-center bg-white px-3 py-1 rounded-lg shadow-md w-80">
-            <input
-              type="text"
-              placeholder="Tìm kiếm ..."
-              className="flex-grow outline-none text-gray-700 text-sm"
-            />
-            <FaSearch className="text-gray-600 ml-2 cursor-pointer" />
-          </div>
-        </div>
-      </nav>
+      
     </header>
   );
 }

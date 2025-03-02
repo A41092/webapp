@@ -46,9 +46,6 @@ export default function Layout() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
-      {/* Header */}
-      <Header />
-
       {/* Container */}
       <div>
         <ProductSlider />
@@ -78,11 +75,7 @@ export default function Layout() {
                     </div>
                 </div>
             </div> */}
-
-      {/* Footer */}
-      
-        <Footer />
-       
+     
     </div>
   );
 }
